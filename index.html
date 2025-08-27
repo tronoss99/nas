@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remod Addons Repository</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #1a1a1a;
+            color: #e0e0e0;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 10px;
+        }
+        .header h1 {
+            margin: 0;
+            color: white;
+            font-size: 2.5em;
+        }
+        .header p {
+            margin: 10px 0 0;
+            color: rgba(255,255,255,0.9);
+        }
+        .files-section {
+            background: #2d2d2d;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .files-section h2 {
+            color: #4CAF50;
+            margin-top: 0;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+        .file-list {
+            list-style: none;
+            padding: 0;
+        }
+        .file-list li {
+            margin: 10px 0;
+            padding: 15px;
+            background: #3d3d3d;
+            border-radius: 5px;
+            border-left: 4px solid #2196F3;
+        }
+        .file-list a {
+            color: #64B5F6;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+        }
+        .file-list a:hover {
+            color: #90CAF9;
+            text-decoration: underline;
+        }
+        .file-icon {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+        .install-section {
+            background: #2d2d2d;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid #FF9800;
+        }
+        .install-section h2 {
+            color: #FF9800;
+            margin-top: 0;
+        }
+        .install-steps {
+            counter-reset: step-counter;
+            padding: 0;
+            list-style: none;
+        }
+        .install-steps li {
+            counter-increment: step-counter;
+            margin: 15px 0;
+            padding: 15px;
+            background: #3d3d3d;
+            border-radius: 5px;
+            position: relative;
+            padding-left: 60px;
+        }
+        .install-steps li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #FF9800;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .url-box {
+            background: #1e1e1e;
+            border: 1px solid #555;
+            border-radius: 5px;
+            padding: 10px;
+            font-family: 'Courier New', monospace;
+            color: #4CAF50;
+            margin: 10px 0;
+            word-break: break-all;
+        }
+        .warning {
+            background: #332c00;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .warning h3 {
+            color: #ffc107;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🚀 Remod Addons Repository</h1>
+        <p>Repositorio de complementos para Kodi</p>
+    </div>
+
+    <div class="files-section">
+        <h2>📁 Archivos del Repositorio</h2>
+        <ul class="file-list">
+            <li>
+                <a href="addons.xml">
+                    <span class="file-icon">📄</span>
+                    addons.xml - Lista principal de complementos
+                </a>
+            </li>
+            <li>
+                <a href="addons.xml.gz">
+                    <span class="file-icon">🗜️</span>
+                    addons.xml.gz - Lista comprimida
+                </a>
+            </li>
+            <li>
+                <a href="repository.remod/">
+                    <span class="file-icon">📦</span>
+                    repository.remod/ - Repositorio principal
+                </a>
+            </li>
+            <li>
+                <a href="plugin.video.duffyou/">
+                    <span class="file-icon">🎬</span>
+                    plugin.video.duffyou/ - Plugin de video
+                </a>
+            </li>
+            <li>
+                <a href="plugin.video.moestv/">
+                    <span class="file-icon">📺</span>
+                    plugin.video.moestv/ - Plugin de video
+                </a>
+            </li>
+            <li>
+                <a href="service.instalador.remod/">
+                    <span class="file-icon">⚙️</span>
+                    service.instalador.remod/ - Servicio instalador
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="install-section">
+        <h2>🔧 Instalar en Kodi</h2>
+        <ol class="install-steps">
+            <li>Abre Kodi y ve a <strong>Sistema</strong> → <strong>Complementos</strong></li>
+            <li>Haz clic en <strong>"Instalar desde archivo ZIP"</strong></li>
+            <li>Selecciona <strong>"Añadir fuente"</strong> e introduce esta URL:
+                <div class="url-box">https://tronoss99.github.io/nas/</div>
+            </li>
+            <li>Navega a <strong>repository.remod/</strong> y selecciona el archivo .zip</li>
+            <li>Una vez instalado, ve a <strong>"Instalar desde repositorio"</strong></li>
+            <li>Selecciona <strong>"Remod Repository"</strong> y explora los complementos</li>
+        </ol>
+
+        <div class="warning">
+            <h3>⚠️ Importante</h3>
+            <p>Asegúrate de tener activada la opción <strong>"Fuentes desconocidas"</strong> en Kodi:</p>
+            <p><strong>Sistema</strong> → <strong>Complementos</strong> → <strong>Fuentes desconocidas</strong> = Habilitado</p>
+        </div>
+    </div>
+
+    <div class="files-section">
+        <h2>📊 Enlaces Directos</h2>
+        <ul class="file-list">
+            <li>
+                <a href="https://raw.githubusercontent.com/tronoss99/nas/main/addons.xml">
+                    <span class="file-icon">🔗</span>
+                    Ver addons.xml (GitHub Raw)
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/tronoss99/nas">
+                    <span class="file-icon">🐙</span>
+                    Ver código fuente en GitHub
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
